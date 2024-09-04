@@ -1,0 +1,108 @@
+.gallery-container {
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Ensure proper positioning for the button */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-title {
+    color: #ffffff;
+    font-size: 24px;
+  }
+  
+  .gallery-controls {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Position controls within the container */
+    right: 20px;
+    top: 20px;
+  }
+  
+  .gallery-add-button {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure it stays above other elements */
+  }
+  
+  .gallery-add-button:hover {
+    background-color: #4c4c4c;
+  }
+  
+  .gallery-control-button {
+    background-color: #4c4c4c;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gallery-control-button:hover {
+    background-color: #5c5c5c;
+  }
+  
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust gap between images */
+    justify-content: flex-start;
+    margin-top: 20px; /* Add margin to ensure space for controls */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  }
+  
+  .gallery-image {
+    width: calc(33.33% - 10px); /* Ensure three images fit in a row with space between */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding and border are included */
+  }
+  
+  .gallery-grid.expanded {
+    justify-content: space-between;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .gallery-container {
+      padding: 30px;
+    }
+  
+    .gallery-title {
+      font-size: 28px;
+    }
+  
+    .gallery-add-button {
+      padding: 12px 24px;
+      font-size: 18px;
+    }
+  
+    .gallery-control-button {
+      padding: 12px;
+      font-size: 18px;
+    }
+  
+    .gallery-image {
+      width: calc(33.33% - 15px); /* Slightly adjust for padding and margin */
+    }
+  }
+  

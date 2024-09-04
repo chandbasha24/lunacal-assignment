@@ -1,0 +1,17 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-empty-space {
+    flex: 1;
+}
+
+.right-widgets {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
